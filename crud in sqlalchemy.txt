@@ -1,0 +1,18 @@
+create:
+newpost=Post(title='hakask',content='dadsa')
+db.session.add(newpost)
+db.session.commit()
+
+read:
+all_post=Post.query.all()
+single_post=Post.quer.get(id)
+
+update:
+post=Post.query.get(id)
+post.title='NewTitle' #changes
+db.session.commit()
+
+delete:
+post=Post.query.get(id)
+db.session.delete(post)
+db.session.commit()
